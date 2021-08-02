@@ -1,0 +1,58 @@
+.el-card {
+  background-color: #121820;
+  .el-card__header {
+    border-bottom: 1px solid #313846;
+  }
+}
+
+.statForm.el-form {
+  margin-bottom: 10px;
+  text-align: center;
+  .el-form-item {
+    border: 1px solid #313846;
+    padding: 15px;
+  }
+}
+
+.el-button--primary {
+  color: #fff;
+  background-color: #0e78ad;
+  border-color: #0e78ad;
+}
+
+.mobLevel {
+  float: right; 
+  color: #8492a6; 
+  font-size: 13px
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.btn {
+  width: 100%;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 26px;
+  margin-bottom: 20px;
+}
+
+.result {
+  font-size: 4em;
+  margin-top: 30px;
+}
+
+.mobSelect {
+  width: 220px
+}
+
+.rate {
+  font-size: 20px;
+}
+
+.notice {
+  margin-top: 50px;
+}
