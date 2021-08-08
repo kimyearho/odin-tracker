@@ -1,3 +1,26 @@
+html {
+  height: 100%;
+  background: url(http://odin-tracker.kr/bg2.png) no-repeat top center;
+
+  body {
+    background: initial;
+  }
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.divider {
+  border: 1px solid #313846;
+  margin-bottom: 20px;
+}
+
+.resultLabel {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
 .el-card {
   background-color: #121820;
   .el-card__header {
