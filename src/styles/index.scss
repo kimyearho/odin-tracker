@@ -7,8 +7,24 @@ html {
   }
 }
 
+.logo {
+  text-align: center;
+}
+
+.width-100 {
+  width: 100%
+}
+
 .font-20 {
   font-size: 20px;
+}
+
+.el-input-number--mini {
+  width: 160px;
+}
+
+.el-select-dropdown {
+  min-width: 215px !important;
 }
 
 .divider {
@@ -18,7 +34,7 @@ html {
 
 .resultLabel {
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .el-card {
