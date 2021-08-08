@@ -5,7 +5,7 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 // create an axios instance
 const service = axios.create({
-  baseURL: 'http://158.247.198.68',
+  baseURL: 'http://odin-tracker.kr',
   timeout: 5000 // request timeout
 });
 
