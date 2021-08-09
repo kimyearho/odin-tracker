@@ -5,6 +5,12 @@
     :is-visible="infoModalVisible"
     @close="openInfo(false)"
   />
+  <char-info-modal
+    v-if="charModalVisible"
+    append-to-body
+    :is-visible="charModalVisible"
+    @close="charInfo(false)"
+  />
   <div class="logo">
     <img src="http://odin-tracker.kr/logo.png" />
   </div>
@@ -21,6 +27,12 @@
         <template #header>
           <div class="card-header">
             <span>캐릭터 정보</span>
+            <el-button
+              type="text"
+              icon="el-icon-info"
+              circle
+              @click="charInfo(true)"
+            ></el-button>
           </div>
         </template>
         <el-form
@@ -67,7 +79,7 @@
               :sm="{span: 24}"
             >
               <el-form-item>
-                <template #label>추가 명중</template>
+                <template #label>추가 명중 (근/마/원)</template>
                 <el-input-number
                   v-model="userCharHitRate"
                   :min="0"
@@ -203,11 +215,14 @@
 import {onMounted, ref, toRefs} from 'vue'
 import $axios from '@/plugins/axios'
 import CalculatorService from './service/calculatorService'
+import CharInfoModal from '@/components/CharInfoModal.vue'
 import InfoModal from '@/components/InfoModal.vue'
+
 
 export default {
   name: 'Main',
   components: {
+    CharInfoModal,
     InfoModal
   },
   setup() {
@@ -228,10 +243,14 @@ export default {
     } = CalculatorService()
 
     const infoModalVisible = ref(false)
+    const charModalVisible = ref(false)
     const options = ref([])
     const counter = ref(null)
     const openInfo = (v) => {
       infoModalVisible.value = v
+    }
+    const charInfo = (v) => {
+      charModalVisible.value = v
     }
 
     onMounted(() => {
@@ -253,7 +272,9 @@ export default {
       mobAreaMinLevelSkillHitRate,
       mobAreaMaxLevelSkillHitRate,
       counter,
+      charInfo,
       openInfo,
+      charModalVisible,
       infoModalVisible,
       changeMobArea,
       reset,
